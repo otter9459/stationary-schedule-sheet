@@ -2,29 +2,26 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import DayOfWeeks from "./DayOfWeeks";
 import Dates from "./Dates";
-
-
-import { useState } from "react";
-import { initialState } from "../reducers/initialState";
+import { moveToNextMonth, moveToPrevMonth } from "../actions";
 
 function Calendar() {
   const state = useSelector(state => state.calendarReducer);
   const { people, schedule, today} = state;
   const dispatch = useDispatch()
 
-  const [ curDay, setCurDay ] = useState(initialState.today)
-
   const prevMonth = () => {
-    let now = curDay[0].slice(0, 8)
-    let test = curDay[0].slice(-1)-1
-    setCurDay([now + test])
+    dispatch(moveToPrevMonth(today))
   }
-  console.log(curDay)
+
+  const nextMonth = () => {
+    dispatch(moveToNextMonth(today))
+  }
+  
   return (
     <div className="calendar-wraper">
       <div className="calendar-header-wraper">
         <div className="calendar-month-view">
-          <span onClick={prevMonth} >{'<'}</span>{curDay}<span>{'>'}</span>
+          <span onClick={prevMonth}>{'<'}</span>{today}<span onClick={nextMonth}>{'>'}</span>
         </div>
       </div>
       <div className="calendar-body-wraper">
