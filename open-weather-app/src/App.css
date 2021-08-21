@@ -1,38 +1,61 @@
-.App {
+* {
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+body {
+  border: 1px solid red;
+}
+
+.calendar-wraper {
+  border: 1px solid blue;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 100%;
+  height: 50%;
+  margin-left: -50%;
+  display: table;
+}
+
+.calendar-month-view {
+  text-align: center;
+  padding: 1rem 1rem 0 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.calendar-day-of-weeks {
+  border: 1px solid gray;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dayOfWeeks-days {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.dayOfWeeks-day {
+  border: 1px solid violet;
+  flex-grow: 1;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar-body-wraper {
+  border: 1px solid gold;
+  display: table-row;
+  max-height: 100%;
+  height: 100%;
+}
+
+.calendar-date-wraper {
+  border: 3px solid green;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calendar-date {
+  height: 3rem;
+  border: 1px solid red;
+  flex: 1 1 14%;
 }
