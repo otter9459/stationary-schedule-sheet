@@ -7,7 +7,6 @@ const calendarReducer = (state = initialState, action) => {
     case MOVE_TO_PREV_MONTH:
       let newMonth = action.payload.today[0].slice(0, 7)
       let prevMonth = action.payload.today[0].slice(-2)-1
-      console.log(newMonth.slice(0, 4))
 
       if(prevMonth === 0) {
         newMonth = newMonth.slice(0, 4)-1 + ' - '

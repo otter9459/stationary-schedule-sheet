@@ -12,9 +12,9 @@ body {
   position: absolute;
   top: 20%;
   left: 50%;
-  width: 100%;
+  width: 60%;
   height: 50%;
-  margin-left: -50%;
+  margin-left: -30%;
   display: table;
 }
 
@@ -58,4 +58,76 @@ body {
   height: 3rem;
   border: 1px solid red;
   flex: 1 1 14%;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+    font-size: 1.2rem;
+  }
+
+  body {
+    border: 1px solid blue;
+  }
+
+  .calendar-wraper {
+    border: 1px solid blue;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100%;
+    height: 50%;
+    margin-left: -50%;
+    display: table;
+  }
+
+  .calendar-month-view {
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .calendar-day-of-weeks {
+    border: 1px solid gray;
+    text-align: center;
+  }
+
+  .dayOfWeeks-days {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dayOfWeeks-day {
+    border: 1px solid violet;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .calendar-body-wraper {
+    border: 1px solid gold;
+    display: table-row;
+    max-height: 100%;
+    height: 100%;
+  }
+
+  .calendar-date-wraper {
+    border: 3px solid green;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .calendar-date {
+    height: 3rem;
+    border: 1px solid red;
+    flex: 1 1 14%;
+  }
+
+  .arrow {
+    cursor: pointer;
+  }
 }
