@@ -16,6 +16,7 @@ export const initialState =
       "name": "person3",
     },
   ],
+
   "schedule": [
     "18:00", "14:00", "16:00", "off",
     "06:00", "off",
@@ -23,7 +24,17 @@ export const initialState =
     "14:00", "06:00", "06:00", "off",
     "09:30", "06:00", "14:00", "06:00", "off",
   ],
+
   "today": [
     moment().format("YYYY - MM")
-  ]
+  ],
+
+  "firstDayOfMonth": [
+    moment().startOf('month').get('d')
+  ],
+  
 }
+
+
+// const firstDateOfMonth = moment().startOf('month');
+// let firstDayOfMonth = firstDateOfMonth.get('d');

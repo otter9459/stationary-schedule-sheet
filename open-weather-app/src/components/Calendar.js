@@ -21,7 +21,7 @@ function Calendar() {
     <div className="calendar-wraper">
       <div className="calendar-header-wraper">
         <div className="calendar-month-view">
-          <span onClick={prevMonth}>{'<'}</span>{today}<span onClick={nextMonth}>{'>'}</span>
+          <span onClick={prevMonth} className="arrow">{'<'}</span>{today}<span onClick={nextMonth} className="arrow">{'>'}</span>
         </div>
       </div>
       <div className="calendar-body-wraper">
